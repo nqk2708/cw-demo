@@ -1,0 +1,67 @@
+<div id="header" [ngClass]="{scrolled}">
+    <div class="header__outter">
+        <div class="header__inner container">
+            <ul class="header__languages">
+                <li class="header__language">
+                    <img src="https://cacnuoc.vn/wp-content/uploads/2017/04/viet-nam.gif" alt="">
+                    <span>Tiếng Việt</span>
+                </li>
+                <li class="header__language">
+                    <img src="https://cacnuoc.vn/wp-content/uploads/2016/04/UnionFlag.png" alt="">
+                    <span>English</span>
+                </li>
+                <li class="header__language">
+                    <img src="https://cacnuoc.vn/wp-content/uploads/2017/04/nhat-ban.gif" alt="">
+                    <span>日本語</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header__navbar container">
+        <a routerLink="" class="header__navbar__logo">
+            <img src="https://cozwork.com/resources/favicon.png" alt="" class="header__navbar__logo-img">
+        </a>
+        <ul class="header__navbar__menu hide-on-mobile-tablet">
+            <li class="header__navbar__menu-item">
+                <a routerLink="" class="header__navbar__menu-link">
+                    home
+                </a>
+            </li>
+            <li class="header__navbar__menu-item">
+                <a routerLink="/what-we-do" routerLinkActive="active" class="header__navbar__menu-link">
+                    what we do
+                </a>
+            </li>
+            <li class="header__navbar__menu-item">
+                <a routerLink="/contact-us" routerLinkActive="active" class="header__navbar__menu-link">
+                    contact us
+                </a>
+            </li>
+        </ul>
+        <div class="header__bars-btn show-on-mobile-tablet"
+            (click)="handleMenu()"
+        >
+            <i class="icon ion-md-menu"></i>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <ng-container *ngIf="toggleMenu">
+        <ul class="header__navbar__menu-mobile">
+            <li class="header__navbar__menu-item">
+                <a routerLink="" class="header__navbar__menu-link">
+                    home
+                </a>
+            </li>
+            <li class="header__navbar__menu-item">
+                <a routerLink="/what-we-do" routerLinkActive="active" class="header__navbar__menu-link">
+                    what we do
+                </a>
+            </li>
+            <li class="header__navbar__menu-item">
+                <a routerLink="/contact-us" routerLinkActive="active" class="header__navbar__menu-link">
+                    contact us
+                </a>
+            </li>
+        </ul>
+    </ng-container>
+</div>

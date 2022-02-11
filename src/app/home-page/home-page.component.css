@@ -1,0 +1,140 @@
+/* Slide Carousel */
+#carousel {
+    padding-top: 20px;
+}
+
+.carousel-item img {
+    height: 378px;
+    object-fit: contain;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--c-primary);
+    border-radius: 50%;
+}
+.carousel-indicators [data-bs-target] {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+/* home content */
+.home__content {
+    margin-top: 20px;
+    background-image: radial-gradient(circle farthest-side at center center,#03246c 0,#06225a 26.5%,#001e3f 70%);
+}
+.home__content-wrap {
+    width: 950px;
+    padding: 50px;
+}
+.home__content__title {
+    color: #fff;
+    font-size: 5.8rem;
+}
+.home__content__description {
+    color: #fff;
+    font-size: 2.4rem;
+    margin: 30px 0 65px 0;
+}
+.home__content__btns {
+    text-transform: uppercase;
+
+}
+.put-btn {
+    background-color: #fdd700;
+    color: var(--c-primary);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 15px 57px 15px;
+    border-radius: 40px;
+    transition: all .2s linear;
+}
+.put-btn:hover {
+    box-shadow: 0 5px 40px 0 rgb(253 195 32 / 50%);
+}
+.get-btn {
+    color: #fdd700;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 15px 57px 15px;
+    border-radius: 40px;
+    transition: all .2s linear;
+}
+.get-btn:hover {
+    color: var(--c-blue);
+}
+
+
+.home__benefits{
+    padding: 70px 50px 50px;
+}
+
+.home__benefits__title {
+    color: #fdd700;
+    font-size: 2.4rem;
+}
+
+.home__benefits-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home__benefits__list{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.home__benefits__item{
+    color: #fff;
+    border-bottom: 2px solid #fdd700;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.home__benefits__item-num{
+    color: #fdd700;
+    font-size: 5.1rem;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 60px;
+    border-right: 2px solid #fdd700;
+    text-align: center;
+}
+.home__benefits__item-des{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+@media (max-width: 1151px) { 
+    .home__benefits-wrap {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 796px) {
+    .home__content__title {
+        font-size: 1.8rem;
+    }
+    .home__content__description {
+        font-size: 1.6rem;
+    }
+    .home__content-wrap {
+        width: unset;
+    }
+    #carousel {
+        display: none;
+    }
+    .put-btn {
+        width: 100%;
+    }
+    .get-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .home__benefits {
+        padding-top: 0;
+    }
+}

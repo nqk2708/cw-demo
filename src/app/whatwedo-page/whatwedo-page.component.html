@@ -1,0 +1,64 @@
+<div class="container">
+    <div id="putClients" class="row wwdo__top">
+        <div class="col-12 col-md-5">
+            <div class="wwdo__top-content">
+                <h2 class="wwdo__top-content__heading">Put the client first.</h2>
+                <p class="wwdo__top-content__des">
+                    Dedication to every client's success.<br>
+                    Trust and personal responsibility.<br>
+                    Innovation that matters - listen to needs, envision the future.
+                </p>
+            <a href="/what-we-do#wwdo__collab" class="btn wwdo__collab-btn">work with us</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-7">
+            <div class="wwdo__top-img">
+                <img src="https://cozwork.com/resources/what-we-do.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="wwdo__main">
+        <div class="row g-5">
+            <ng-container *ngFor="let card of cards">
+                <div class="col-12 col-md-6">
+                    <div class="wwdo__main__card"
+                        (click)="rotateDetail($event, card.index)"
+                    >
+                    
+                        <ng-container *ngIf="!card.actived">
+                            <div class="wwdo__main__card-figure">
+                                <img src="https://cozwork.com/resources/creative-front-end-development.svg" alt="">
+                            </div>  
+                            <h3 class="wwdo__main__card-title">{{card.heading}}</h3>
+                            <p class="wwdo__main__card-info">{{card.description}}</p>
+                            <button class="wwdo__main__card-btn"
+                                (click)="readDetail($event, card.index)"
+                            >
+                                Read more
+                            </button>
+                        </ng-container>
+                    
+                        <ng-container *ngIf="card.actived">
+                            <div class="wwdo__main__card-figure">
+                                <img src="https://cozwork.com/resources/creative-front-end-development.svg" alt="">
+                            </div>  
+                            <ul class="wwdo__main__card-details">
+                                <li class="wwdo__main__card-detail" *ngFor="let detail of card.details">{{detail}}</li>
+                            </ul>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="background-color: var(--c-primary);">
+    <div id="wwdo__collab" class="wwdo__collab">
+        <h3 class="wwdo__collab__heading">Let's talk</h3>
+        <p class="wwdo__collab__content">
+            Need a hand with any of the above? Shoot us a short email and we'll jump on a quick call or chat with you to discuss your engineering needs.
+        </p>
+        <a href="mailto:collab@cozwork.com" class="btn wwdo__collab-btn">schedule a call</a>
+    </div>
+</div>
